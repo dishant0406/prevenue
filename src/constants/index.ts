@@ -6,6 +6,7 @@ import { FEATURES } from "./features";
 import { FAQS } from "./faqs";
 import { STATS } from "./stats";
 import { BLOGS } from "./blogs";
+import { MISSION } from "./mission";
 
 export {
     base,
@@ -19,4 +20,5 @@ export {
     FAQS,
     STATS,
     BLOGS,
+    MISSION,
 }

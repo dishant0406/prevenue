@@ -2,13 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants";
-import { AnimatePresence, isCSSVariableName, motion } from "framer-motion";
+import { cn } from "@/lib";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib";
 
 const Navbar = () => {
 
@@ -68,8 +68,8 @@ const Navbar = () => {
                 <Container animation="fadeLeft" delay={0.1}>
                     <div className="flex items-center gap-x-4">
                         <Link href="#">
-                            <Button size="sm">
-                                Sign In
+                            <Button size="sm" variant="outline">
+                                Contact Sales
                             </Button>
                         </Link>
                     </div>
