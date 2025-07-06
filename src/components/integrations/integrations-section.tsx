@@ -42,7 +42,7 @@ const IntegrationsSection = () => {
                         {filteredIntegrations.map((integration, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col p-6 rounded-2xl bg-[#0A0A0A] border border-border/50 hover:border-primary/50 transition-all duration-300"
+                                className="flex flex-col p-6 rounded-2xl bg-[#0A0A0A] border border-border hover:border-primary/50 transition-all duration-300"
                             >
                                 <div className="size-12 rounded-lg bg-card flex items-center justify-center">
                                     <Image

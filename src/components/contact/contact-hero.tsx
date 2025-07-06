@@ -7,17 +7,17 @@ import { PhoneIcon, MailIcon, MapPinIcon } from "lucide-react"
 const CONTACT_CARDS = [
     {
         title: "Phone Number",
-        value: "(01) 9000 0000",
+        value: "+1 (123) 456-7890",
         icon: PhoneIcon
     },
     {
         title: "Verve Address",
-        value: "Sydney, Australia, 2000",
+        value: "Mumbai, India",
         icon: MapPinIcon
     },
     {
         title: "Email Address",
-        value: "vervetemplate@flowbase.co",
+        value: "support@verve.com",
         icon: MailIcon
     }
 ] as const;

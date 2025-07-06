@@ -18,10 +18,10 @@ export const NAV_LINKS = [
 ];
 
 export const PRODUCT_LINKS = [
-    { label: "Features", href: "/features" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
     { label: "Integrations", href: "/integrations" },
-    { label: "Demo", href: "/demo" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Demo", href: "/contact" },
 ];
 
 export const RESOURCES_LINKS = [
