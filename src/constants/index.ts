@@ -3,7 +3,7 @@ import { TESTIMONIALS } from "./testimonials";
 import { NAV_LINKS, PRODUCT_LINKS, RESOURCES_LINKS } from "./links";
 import { PRICING_PLANS } from "./pricing";
 import { FEATURES } from "./features";
-import { FAQS } from "./faqs";
+import { FAQS, QUESTIONS } from "./faqs";
 import { STATS } from "./stats";
 import { BLOGS } from "./blogs";
 import { MISSION } from "./mission";
@@ -21,4 +21,5 @@ export {
     STATS,
     BLOGS,
     MISSION,
+    QUESTIONS,
 }

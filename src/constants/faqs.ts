@@ -20,3 +20,22 @@ export const FAQS = [
         answer: "We offer a 30-day return policy for all our products. If you're not satisfied, you can return it within 30 days for a full refund"
     }
 ];
+
+export const QUESTIONS = [
+    {
+        title: "Templates",
+        description: "Access a wide range of professionally designed templates to kickstart your projects. Our templates are customizable and follow best practices for modern web development."
+    },
+    {
+        title: "Webflow",
+        description: "Build responsive websites visually with our powerful Webflow integration. Design, develop, and launch your site without writing complex code."
+    },
+    {
+        title: "API Access",
+        description: "Get full access to our robust API with comprehensive documentation. Integrate our services seamlessly into your existing workflows and applications."
+    },
+    {
+        title: "Support",
+        description: "24/7 priority support from our expert team. Get help when you need it with dedicated support channels and detailed documentation."
+    }
+];

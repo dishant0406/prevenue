@@ -31,7 +31,7 @@ const Blogs = () => {
                 </Container>
 
                 <div className="w-full mt-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {BLOGS.slice(0, 3).map((item, index) => (
                             <Item key={index} item={item} index={index} />
                         ))}

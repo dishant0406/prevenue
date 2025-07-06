@@ -4,22 +4,25 @@ export type PlanFeature = {
 
 export type Plan = {
     name: string;
+    badge?: string;
     description: string;
     price: {
         monthly: number;
         yearly: number;
     };
     features: PlanFeature[];
+    buttonText: string;
     popular?: boolean;
 };
 
 export const PRICING_PLANS: Plan[] = [
     {
-        name: "Basic",
-        description: "All you need to get started",
+        name: "Basic Plan",
+        badge: "Basic",
+        description: "Perfect for getting started",
         price: {
             monthly: 12,
-            yearly: 10,
+            yearly: 120,
         },
         features: [
             { text: "Developer docs" },
@@ -27,20 +30,33 @@ export const PRICING_PLANS: Plan[] = [
             { text: "API status notifications" },
             { text: "Troubleshooting" },
         ],
+        buttonText: "Start with Basic",
     },
     {
-        name: "Popular",
-        description: "Unlock more for your growing team",
+        name: "Popular Plan",
+        badge: "Popular",
+        description: "Best for growing teams",
         price: {
             monthly: 40,
-            yearly: 32,
+            yearly: 400,
         },
-        popular: true,
         features: [
             { text: "Developer docs" },
             { text: "Submit cases to support" },
             { text: "API status notifications" },
             { text: "Troubleshooting" },
         ],
-    },
+        buttonText: "Start with Pro",
+        popular: true,
+    }
+];
+
+export const MARQUEE_ITEMS = [
+    "Seamless Success",
+    "Efficient Excellence",
+    "Empowering Growth",
+    "Innovative Simplicity",
+    "Scalable Solutions",
+    "Reliable Performance",
+    "Global Reach"
 ];
