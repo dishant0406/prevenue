@@ -12,7 +12,7 @@ Check out the live demo here: [Live Preview](https://verve-app.vercel.app/)
 
 ## 🎥 Watch the Preview Video on YouTube
 
-Take a look at the YouTube demo: [Watch the Video](https://youtu.be/x3Vh1tOs8j0)
+Take a look at the YouTube demo: [Watch the Video](https://youtu.be/t2DSW1Ncs8c)
 
 ## 💻 Tech Stack
 
