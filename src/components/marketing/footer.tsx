@@ -31,12 +31,14 @@ const Footer = () => {
                                 Effortlessly launch robust, <br />production-ready projects
                             </p>
                             <div className="mt-4 text-sm text-muted-foreground px-4 py-2 cursor-pointer rounded-full border border-border/40 bg-foreground/5 hover:bg-foreground/10 transition-colors duration-300">
-                                <p>+1 (123) 456-7890</p>
+                                <Link href="tel:+11234567890">
+                                    <p>+1 (123) 456-7890</p>
+                                </Link>
                             </div>
                         </div>
                     </Container>
 
-                    <div className="md:grid md:grid-cols-2 place-items-end w-full">
+                    <div className="grid grid-cols-2 md:place-items-end w-full">
                         <Container animation="fadeUp" delay={0.5}>
                             <div>
                                 <h3 className="text-base font-medium">
@@ -64,7 +66,7 @@ const Footer = () => {
                         </Container>
 
                         <Container animation="fadeUp" delay={0.5}>
-                            <div className="mt-10 md:mt-0">
+                            <div>
                                 <h3 className="text-base font-medium">
                                     Resources
                                 </h3>
@@ -92,7 +94,7 @@ const Footer = () => {
                 </div>
 
                 <Container animation="fadeUp" delay={1}>
-                    <div className="mt-16 border-t border-border/80 py-8 flex flex-col md:flex-row items-center justify-center">
+                    <div className="mt-16 border-t border-border/80 pt-8 flex flex-col md:flex-row items-center justify-center">
                         <p className="text-sm text-muted-foreground">
                             © {new Date().getFullYear()} Verve. All rights reserved.
                         </p>

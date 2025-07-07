@@ -7,7 +7,7 @@ import { MISSION } from "@/constants";
 
 const OurMission = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
+        <div className="flex flex-col items-start justify-start md:items-center md:justify-center w-full py-16 lg:py-24">
             <Wrapper>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="flex flex-col px-2 md:px-0 h-full">
@@ -20,12 +20,12 @@ const OurMission = () => {
                             </div>
                         </Container>
                         <Container delay={0.1}>
-                            <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight mt-4">
+                            <h2 className="text-3xl md:text-4xl font-semibold text-left tracking-tight mt-4">
                                 We’re on a mission to power customers
                             </h2>
                         </Container>
                         <Container delay={0.3}>
-                            <p className="text-base lg:text-lg font-normal text-muted-foreground mt-4">
+                            <p className="text-base md:text-lg text-muted-foreground text-left mt-2 max-w-2xl">
                                 Every day, we work to empower businesses to grow and succeed. We’re committed to providing the best possible experience for our customers, and we’re always looking for new ways to improve.
                             </p>
                             <p className="text-base lg:text-lg font-normal text-muted-foreground mt-4">

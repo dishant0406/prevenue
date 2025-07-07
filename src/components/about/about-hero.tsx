@@ -16,7 +16,7 @@ const AboutHero = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
                     <div className="flex flex-col w-full z-10">
                         <Container>
-                            <div className="flex items-center gap-x-1 px-2 py-1.5 relative w-max rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
+                            <div className="flex items-center justify-center gap-x-1 px-2 py-1.5 relative w-max mx-auto md:mx-0 rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
                                 <Icons.stars className="size-5" />
                                 <span className="text-sm text-white">
                                     Verve Product Overview
@@ -25,19 +25,19 @@ const AboutHero = () => {
                         </Container>
 
                         <Container delay={0.1}>
-                            <h2 className="text-balance !leading-[1.25] text-4xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
+                            <h2 className="text-balance !leading-[1.25] text-4xl md:text-6xl font-semibold tracking-tight text-center lg:text-left mt-6 w-full">
                                 Learn About our <br className="hidden lg:inline-block" /> Global Tech Team
                             </h2>
                         </Container>
 
                         <Container delay={0.2}>
-                            <p className="text-base md:text-lg font-normal text-balance text-muted-foreground max-w-3xl mt-4">
+                            <p className="text-base lg:text-lg text-muted-foreground text-center lg:text-left mt-4 max-w-2xl mx-auto lg:mx-0">
                                 Discover our journey, values, and the passionate team driving innovation at Verve to empower your business globally
                             </p>
                         </Container>
 
                         <Container delay={0.3}>
-                            <div className="flex flex-col gap-2 mt-6">
+                            <div className="hidden lg:flex flex-col gap-2 mt-6">
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
@@ -54,7 +54,7 @@ const AboutHero = () => {
                         </Container>
 
                         <Container delay={0.3}>
-                            <div className="mt-6">
+                            <div className="mt-6 flex justify-center lg:justify-start">
                                 <Button size="md">
                                     Get started for free
                                 </Button>

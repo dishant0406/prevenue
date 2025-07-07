@@ -12,8 +12,8 @@ const ContactForm = () => {
         <div className="w-full pb-16 lg:pb-24">
             <Wrapper>
                 <Container delay={0.1}>
-                    <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-2xl lg:text-3xl font-semibold text-center">
+                    <div className="flex flex-col lg:items-center lg:justify-center">
+                        <h2 className="text-2xl lg:text-3xl font-semibold text-left lg:text-center">
                             Contact Us
                         </h2>
                     </div>
@@ -79,12 +79,21 @@ const ContactForm = () => {
                         </div>
 
                         <div className="flex flex-col gap-2">
-                            <div className="flex items-center justify-center gap-2 px-4 py-8 rounded-lg border border-dashed border-border/50 bg-[#0A0A0A] cursor-pointer">
+                            <label
+                                htmlFor="file-upload"
+                                className="flex items-center justify-center gap-2 px-4 py-8 rounded-lg border border-dashed border-border/50 bg-[#0A0A0A] cursor-pointer"
+                            >
                                 <UploadIcon className="size-5 text-muted-foreground" />
                                 <span className="text-sm text-muted-foreground">
-                                    Drop your files here
+                                    Drop your files here or click to upload
                                 </span>
-                            </div>
+                                <input
+                                    id="file-upload"
+                                    type="file"
+                                    multiple
+                                    className="hidden"
+                                />
+                            </label>
                         </div>
 
                         <Button className="w-full">

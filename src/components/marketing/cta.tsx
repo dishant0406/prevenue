@@ -33,7 +33,7 @@ const CTA = () => {
                             </div>
                         </Container>
                     </div>
-                    <div className="flex flex-col justify-center w-full">
+                    <div className="flex flex-col justify-center w-full mt-8 lg:mt-0">
                         <Container className="w-max mx-auto">
                             <div className="flex size-20">
                                 <Image

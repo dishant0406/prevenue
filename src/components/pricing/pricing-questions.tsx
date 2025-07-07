@@ -15,11 +15,11 @@ const PricingQuestions = () => {
         <div className="w-full py-16 lg:py-24">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-2xl lg:text-3xl font-semibold text-center">
+                    <div className="flex flex-col lg:items-center lg:justify-center">
+                        <h2 className="text-2xl lg:text-3xl font-semibold text-left lg:text-center">
                             Wanna know more?
                         </h2>
-                        <p className="text-base lg:text-lg text-muted-foreground mt-2">
+                        <p className="text-base lg:text-lg text-muted-foreground text-left lg:text-center mt-2">
                             Let's dig deeper...
                         </p>
                     </div>

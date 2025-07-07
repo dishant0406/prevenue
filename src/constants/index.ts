@@ -7,6 +7,7 @@ import { FAQS, QUESTIONS } from "./faqs";
 import { STATS } from "./stats";
 import { BLOGS } from "./blogs";
 import { MISSION } from "./mission";
+import { CONTACT_CARDS } from "./contact";
 
 export {
     base,
@@ -22,4 +23,5 @@ export {
     BLOGS,
     MISSION,
     QUESTIONS,
+    CONTACT_CARDS,
 }

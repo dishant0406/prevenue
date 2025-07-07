@@ -17,11 +17,11 @@ const Faq = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                     <Container>
                         <div className="flex flex-col">
-                            <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
-                                <h2 className="text-3xl lg:text-4xl font-semibold text-center lg:text-start tracking-tight">
+                            <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center lg:items-start lg:justify-start">
+                                <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-start tracking-tight">
                                     Frequently asked questions
                                 </h2>
-                                <p className="text-base lg:text-lg font-normal text-muted-foreground text-center lg:text-start mt-2 max-w-md">
+                                <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-start mt-2 max-w-md">
                                     For any other questions, feel welcome to reach out to our team
                                 </p>
                             </div>

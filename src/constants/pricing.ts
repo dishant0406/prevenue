@@ -22,7 +22,7 @@ export const PRICING_PLANS: Plan[] = [
         description: "Perfect for getting started",
         price: {
             monthly: 12,
-            yearly: 120,
+            yearly: 115,
         },
         features: [
             { text: "Developer docs" },
@@ -38,7 +38,7 @@ export const PRICING_PLANS: Plan[] = [
         description: "Best for growing teams",
         price: {
             monthly: 40,
-            yearly: 400,
+            yearly: 384,
         },
         features: [
             { text: "Developer docs" },

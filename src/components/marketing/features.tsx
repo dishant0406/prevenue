@@ -9,11 +9,11 @@ const Features = () => {
         <div className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-3xl lg:text-4xl font-semibold text-center tracking-tight">
+                    <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
+                        <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-center tracking-tight">
                             Build a solution that wins you <br /> more customers
                         </h2>
-                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-center max-w-md mt-2">
+                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-center max-w-md mt-2">
                             Experience the power of Verve with our easy-to-use notebook solution. Get started in minutes
                         </p>
                     </div>

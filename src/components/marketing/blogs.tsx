@@ -1,6 +1,7 @@
 import Container from "@/components/global/container";
 import Wrapper from "@/components/global/wrapper";
 import { BLOGS } from "@/constants";
+import Link from "next/link";
 import Image from "next/image";
 
 type Blog = {
@@ -20,11 +21,11 @@ const Blogs = () => {
         <div className="flex flex-col items-center justify-center relative w-full pb-16 lg:pb-24">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-3xl lg:text-4xl font-semibold text-center tracking-tight">
+                    <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
+                        <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-center tracking-tight">
                             Blog & Articles
                         </h2>
-                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-center mt-2 max-w-md">
+                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-center mt-2 max-w-md">
                             Explore our latest articles and insights on various topics related to our industry and expertise
                         </p>
                     </div>
@@ -42,6 +43,7 @@ const Blogs = () => {
     )
 };
 
+
 const Item = ({ item, index }: { item: Blog, index: number }) => (
     <Container>
         <div className="flex flex-col w-full">
@@ -58,9 +60,12 @@ const Item = ({ item, index }: { item: Blog, index: number }) => (
                 <span className="inline-block px-3 py-1 rounded-sm bg-neutral-800/80 text-xs text-foreground/80 w-max">
                     {item.category}
                 </span>
-                <h3 className="text-lg lg:text-xl font-semibold mt-2">
+                <Link
+                    href={`/blog/${encodeURIComponent(item.title.toLowerCase().replace(/\s+/g, "-"))}`}
+                    className="text-lg lg:text-xl font-semibold mt-2"
+                >
                     {item.title}
-                </h3>
+                </Link>
                 <p className="text-muted-foreground text-sm mt-1">
                     {item.desc}
                 </p>
@@ -69,4 +74,4 @@ const Item = ({ item, index }: { item: Blog, index: number }) => (
     </Container>
 );
 
-export default Blogs
+export default Blogs;

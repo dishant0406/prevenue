@@ -31,7 +31,7 @@ const Hero = () => {
                     </Container>
 
                     <Container delay={0.1}>
-                        <h2 className="text-balance !leading-[1.25] text-center text-4xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
+                        <h2 className="text-balance !leading-[1.25] text-center text-5xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
                             Deliver an Enterprise <br className="hidden lg:inline-block" /> Quality Project in Minutes
                         </h2>
                     </Container>

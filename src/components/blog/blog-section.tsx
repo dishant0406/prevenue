@@ -7,11 +7,11 @@ import Link from "next/link"
 
 const BlogSection = () => {
     return (
-        <div className="w-full py-16 lg:py-24">
+        <div className="w-full pb-16 lg:pb-24">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center">
-                        <h2 className="text-2xl lg:text-3xl font-semibold text-center">
+                    <div className="flex flex-col">
+                        <h2 className="text-2xl lg:text-3xl font-semibold">
                             Latest Post:
                         </h2>
                     </div>

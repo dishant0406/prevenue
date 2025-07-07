@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
+import MobileMenu from "./mobile-menu";
 
 const Navbar = () => {
 
@@ -67,11 +68,14 @@ const Navbar = () => {
 
                 <Container animation="fadeLeft" delay={0.1}>
                     <div className="flex items-center gap-x-4">
-                        <Link href="/contact">
+                        <Link href="/contact" className="hidden lg:block">
                             <Button size="sm" variant="outline">
                                 Contact Sales
                             </Button>
                         </Link>
+                        <div className="lg:hidden">
+                            <MobileMenu />
+                        </div>
                     </div>
                 </Container>
             </Wrapper>

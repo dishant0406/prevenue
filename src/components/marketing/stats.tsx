@@ -7,7 +7,7 @@ const Stats = () => {
     return (
         <div className="flex flex-col items-center justify-center relative w-full py-16 lg:py-24 overflow-hidden">
             <Wrapper>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center w-full">
                     {STATS.map((stat, index) => (
                         <Container
                             key={index}

@@ -8,11 +8,12 @@ const HowItWorks = () => {
         <div className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col lg:flex-row items-center justify-center lg:items-end lg:justify-between px-2 md:px-0">
-                        <h2 className="text-3xl lg:text-4xl font-semibold text-center lg:text-start tracking-tight">
-                            Discover a simple <br /> notebook solution today
+                    <div className="flex flex-col lg:flex-row items-start justify-start lg:items-end lg:justify-between px-2 md:px-0">
+                        <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-start tracking-tight">
+                            Discover a simple
+                            <br /> notebook solution today
                         </h2>
-                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-center lg:text-start mt-4 lg:mt-0 max-w-md">
+                        <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-start mt-4 lg:mt-0 max-w-md">
                             Experience the power of Verve with our easy-to-use notebook solution. Get started in minutes
                         </p>
                     </div>
