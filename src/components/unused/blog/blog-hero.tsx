@@ -1,6 +1,7 @@
-import Container from "../global/container";
-import Icons from "../global/icons";
-import Wrapper from "../global/wrapper";
+import Container from "@/components/global/container";
+import Icons from "@/components/global/icons";
+import Wrapper from "@/components/global/wrapper";
+
 
 const BlogHero = () => {
     return (

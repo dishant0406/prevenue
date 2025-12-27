@@ -1,9 +1,9 @@
-import React from 'react'
-import Wrapper from "../global/wrapper"
-import Container from "../global/container"
-import { BLOGS } from "@/constants"
+
+import Container from '@/components/global/container'
+import Wrapper from '@/components/global/wrapper'
 import Image from "next/image"
 import Link from "next/link"
+import { BLOGS } from '../blogs'
 
 const BlogSection = () => {
     return (

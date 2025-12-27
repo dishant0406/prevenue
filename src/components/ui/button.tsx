@@ -40,15 +40,10 @@ interface ButtonProps extends VariantProps<typeof buttonVariants> {
   href?: string
 }
 
-function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  href,
-  children,
-  ...props
-}: ButtonProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ButtonProps>) {
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  ButtonProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ButtonProps>
+>(({ className, variant, size, asChild = false, href, children, ...props }, ref) => {
   if (href && !asChild) {
     return (
       <Link
@@ -65,11 +60,13 @@ function Button({
   return (
     <Comp
       className={cn(buttonVariants({ variant, size, className }))}
+      ref={ref}
       {...props}
     >
       {children}
     </Comp>
   )
-}
+})
+Button.displayName = "Button"
 
 export { Button, buttonVariants }
