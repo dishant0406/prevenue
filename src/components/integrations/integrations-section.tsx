@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState } from 'react'
-import Wrapper from "../global/wrapper"
-import Container from "../global/container"
-import { INTEGRATIONS, INTEGRATION_CATEGORIES, type Integration } from "@/constants/integrations"
-import { cn } from "@/lib"
-import Image from "next/image"
+import { INTEGRATIONS, INTEGRATION_CATEGORIES } from "@/constants/integrations";
+import { cn } from "@/lib";
+import Image from "next/image";
+import { useState } from 'react';
+import Container from "../global/container";
+import Wrapper from "../global/wrapper";
 
 const IntegrationsSection = () => {
 
-    const [activeCategory, setActiveCategory] = useState<"all" | "social" | "api" | "crm">("all");
+    const [activeCategory, setActiveCategory] = useState<"all" | "booking" | "communication" | "analytics">("all");
 
     const filteredIntegrations = INTEGRATIONS.filter(integration =>
         activeCategory === "all" ? true : integration.category === activeCategory
@@ -50,7 +50,7 @@ const IntegrationsSection = () => {
                                         alt={integration.name}
                                         width={24}
                                         height={24}
-                                        className="size-6"
+                                        className="size-6 rounded-md"
                                     />
                                 </div>
                                 <h3 className="text-lg font-semibold mt-4">

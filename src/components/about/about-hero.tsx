@@ -1,10 +1,10 @@
-import React from 'react'
-import Wrapper from "../global/wrapper";
-import Icons from "../global/icons";
+import { COMPANY_INFO } from "@/constants";
+import { CheckCircle2Icon } from "lucide-react";
 import Image from "next/image";
 import Container from "../global/container";
+import Icons from "../global/icons";
+import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
-import { CheckCircle2Icon } from "lucide-react";
 
 const AboutHero = () => {
     return (
@@ -19,20 +19,20 @@ const AboutHero = () => {
                             <div className="flex items-center justify-center gap-x-1 px-2 py-1.5 relative w-max mx-auto md:mx-0 rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
                                 <Icons.stars className="size-5" />
                                 <span className="text-sm text-white">
-                                    Verve Product Overview
+                                    About {COMPANY_INFO.name}
                                 </span>
                             </div>
                         </Container>
 
                         <Container delay={0.1}>
                             <h2 className="text-balance !leading-[1.25] text-4xl md:text-6xl font-semibold tracking-tight text-center lg:text-left mt-6 w-full">
-                                Learn About our <br className="hidden lg:inline-block" /> Global Tech Team
+                                Built by <br className="hidden lg:inline-block" /> Problem Solvers
                             </h2>
                         </Container>
 
                         <Container delay={0.2}>
                             <p className="text-base lg:text-lg text-muted-foreground text-center lg:text-left mt-4 max-w-2xl mx-auto lg:mx-0">
-                                Discover our journey, values, and the passionate team driving innovation at Verve to empower your business globally
+                                Discover how our software engineering team identified the widespread no-show problem across industries and built {COMPANY_INFO.name} to protect businesses from the $150B revenue loss
                             </p>
                         </Container>
 
@@ -41,13 +41,13 @@ const AboutHero = () => {
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        Create posts, reels and stories
+                                        AI-powered no-show prediction
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        Publish your Facebook posts dynamically
+                                        Automated intelligent overbooking
                                     </span>
                                 </div>
                             </div>

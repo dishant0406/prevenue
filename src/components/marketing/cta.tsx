@@ -1,8 +1,8 @@
+import { COMPANY_INFO } from "@/constants";
 import { CheckCircle2 } from "lucide-react";
-import React from 'react'
-import Wrapper from "../global/wrapper";
-import Container from "../global/container";
 import Image from "next/image";
+import Container from "../global/container";
+import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 
 const CTA = () => {
@@ -15,19 +15,19 @@ const CTA = () => {
                     <div className="flex flex-col items-start justify-center w-full">
                         <Container className="w-max mx-auto">
                             <h2 className="text-3xl lg:text-5xl leading-tight text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-400 font-semibold">
-                                Start Your <br /> 7-day free trial
+                                Ready to Stop <br /> Revenue Loss?
                             </h2>
                             <div className="flex items-center gap-4 mt-6">
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2 className="size-4 text-primary" />
                                     <span className="text-sm font-medium">
-                                        Free 7-day trial
+                                        Custom setup included
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2 className="size-4 text-primary" />
                                     <span className="text-sm font-medium">
-                                        No credit card required
+                                        Revenue recovery guarantee
                                     </span>
                                 </div>
                             </div>
@@ -45,12 +45,12 @@ const CTA = () => {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mt-6">
-                                <Button size="lg">
-                                    Get Started
+                                <Button href="/contact" size="lg">
+                                    Book a Call
                                 </Button>
                                 <div className="flex flex-col">
                                     <span className="text-sm text-muted-foreground">
-                                        4.80/5 <br /> From 300+ Customer Reviews
+                                        {COMPANY_INFO.metrics.revenueRecovered} Revenue <br /> Recovered for {COMPANY_INFO.metrics.practicesServed} Practices
                                     </span>
                                 </div>
                             </div>

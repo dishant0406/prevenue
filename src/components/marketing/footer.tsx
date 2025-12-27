@@ -1,8 +1,8 @@
+import { COMPANY_INFO, PRODUCT_LINKS, RESOURCES_LINKS } from "@/constants";
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from "../global/container";
 import Wrapper from "../global/wrapper";
-import { PRODUCT_LINKS, RESOURCES_LINKS } from "@/constants";
 
 const Footer = () => {
     return (
@@ -17,28 +17,28 @@ const Footer = () => {
                         <div className="flex flex-col items-start justify-start md:max-w-[300px]">
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src="/icons/icon.svg"
-                                    alt="Verve"
-                                    width={32}
+                                    src="/Logo/prevenue.webp"
+                                    alt="Prevenue"
+                                    width={100}
                                     height={32}
-                                    className="size-6"
+                                    className="w-auto h-5"
                                 />
                                 <span className="text-lg lg:text-xl font-medium">
-                                    Verve
+                                    {COMPANY_INFO.name}
                                 </span>
                             </div>
                             <p className="text-muted-foreground mt-4 text-sm">
-                                Effortlessly launch robust, <br />production-ready projects
+                                {COMPANY_INFO.shortDescription}
                             </p>
                             <div className="mt-4 text-sm text-muted-foreground px-4 py-2 cursor-pointer rounded-full border border-border/40 bg-foreground/5 hover:bg-foreground/10 transition-colors duration-300">
-                                <Link href="tel:+11234567890">
-                                    <p>+1 (123) 456-7890</p>
+                                <Link href={`mailto:${COMPANY_INFO.email.hello}`}>
+                                    <p>{COMPANY_INFO.email.hello}</p>
                                 </Link>
                             </div>
                         </div>
                     </Container>
 
-                    <div className="grid grid-cols-2 md:place-items-end w-full">
+                    <div className="grid grid-cols-2 md:place-items-start w-full">
                         <Container animation="fadeUp" delay={0.5}>
                             <div>
                                 <h3 className="text-base font-medium">
@@ -93,10 +93,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <Container animation="fadeUp" delay={1}>
+                <Container className="pb-8" animation="fadeUp" delay={1}>
                     <div className="mt-16 border-t border-border/80 pt-8 flex flex-col md:flex-row items-center justify-center">
                         <p className="text-sm text-muted-foreground">
-                            © {new Date().getFullYear()} Verve. All rights reserved.
+                            © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
                         </p>
                     </div>
                 </Container>

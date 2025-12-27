@@ -1,32 +1,32 @@
 export const FEATURES = [
     {
-        title: "Responsive Break Points",
-        desc: "Adapt your layout seamlessly across all devices with flexible breakpoints.",
+        title: "AI Predictive Analysis",
+        desc: "Advanced machine learning algorithms analyze patient patterns, appointment history, and behavioral data to predict no-shows before they happen.",
         icon: "/icons/pie.svg",
     },
     {
-        title: "Easy to Customize",
-        desc: "Effortlessly tailor components to match your brand and workflow.",
+        title: "Smart Integration",
+        desc: "Seamlessly connects with your existing booking systems like Vagaro, Mindbody, SimplePractice, and more without disrupting your workflow.",
         icon: "/icons/computer.svg",
     },
     {
-        title: "Framer CMS",
-        desc: "Manage your content dynamically with powerful CMS integration.",
+        title: "Intelligent Overbooking",
+        desc: "Automatically manages your schedule by strategically overbooking high-risk slots with waitlist clients to maximize revenue.",
         icon: "/icons/label.svg",
     },
     {
-        title: "Structured Layers",
-        desc: "Organize your project with clear, maintainable layer structures.",
+        title: "Escalating Reminders",
+        desc: "Dynamic reminder system that adapts to individual client risk levels with personalized messaging and timing.",
         icon: "/icons/crown.svg",
     },
     {
-        title: "Text Effects",
-        desc: "Enhance your typography with stunning and customizable text effects.",
+        title: "Automated Consequences",
+        desc: "Smart penalty system that flags repeat offenders, requires deposits, and restricts scheduling to reduce future no-shows.",
         icon: "/icons/cursor.svg",
     },
     {
-        title: "Time Animations",
-        desc: "Bring your UI to life with smooth and engaging time-based animations.",
+        title: "Real-time Analytics",
+        desc: "Comprehensive dashboard showing no-show predictions, revenue recovery, and actionable insights to optimize your practice.",
         icon: "/icons/clock.svg",
     },
 ];

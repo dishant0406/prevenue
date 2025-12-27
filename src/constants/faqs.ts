@@ -1,41 +1,41 @@
 export const FAQS = [
     {
-        question: "Are there any additional costs or hidden fees?",
-        answer: "No, there are no additional costs or hidden fees. The pricing is transparent and includes all features",
+        question: "How accurate are Prevenue's no-show predictions?",
+        answer: "Our AI algorithms achieve 85-90% accuracy in predicting no-shows by analyzing historical patterns, appointment types, client behavior, and industry-specific factors. The system continuously learns and improves its predictions over time.",
     },
     {
-        question: "How can I contact support for assistance?",
-        answer: "You can contact our support team via email at support@example.com",
+        question: "Which booking systems does Prevenue integrate with?",
+        answer: "Prevenue seamlessly integrates with popular platforms including Vagaro, Mindbody, SimplePractice, Acuity, Square Appointments, and many others. We also offer custom integration support for any existing system you use.",
     },
     {
-        question: "What are the highlights of your product?",
-        answer: "Our product offers a range of features including real-time collaboration, advanced analytics",
+        question: "How quickly can I see results from using Prevenue?",
+        answer: "Most practices see a 20-30% reduction in no-shows within the first month. Our AI needs about 2-3 weeks to learn your specific patterns, after which predictions become highly accurate and revenue recovery accelerates.",
     },
     {
-        question: "Where can I buy your product or how can I place an order?",
-        answer: "You can purchase our product directly from our website by visiting the pricing page and selecting your desired plan",
+        question: "What happens if a client repeatedly no-shows?",
+        answer: "Prevenue automatically implements consequence management including flagging repeat offenders, requiring deposits for future bookings, and can restrict scheduling privileges after multiple no-shows. All rules are customizable to your practice policies.",
     },
     {
-        question: "What is your product's return or exchange policy?",
-        answer: "We offer a 30-day return policy for all our products. If you're not satisfied, you can return it within 30 days for a full refund"
+        question: "How do I get started with Prevenue?",
+        answer: "Simply book a call with our team. We'll discuss your specific needs, analyze your current no-show patterns, and create a custom solution that integrates seamlessly with your existing systems. Setup and training are included."
     }
 ];
 
 export const QUESTIONS = [
     {
-        title: "Templates",
-        description: "Access a wide range of professionally designed templates to kickstart your projects. Our templates are customizable and follow best practices for modern web development."
+        title: "AI Predictions",
+        description: "Advanced machine learning analyzes appointment patterns, client history, and industry-specific factors to predict no-shows with 85-90% accuracy before they happen."
     },
     {
-        title: "Webflow",
-        description: "Build responsive websites visually with our powerful Webflow integration. Design, develop, and launch your site without writing complex code."
+        title: "Smart Integrations",
+        description: "Seamlessly connects with your existing booking systems like Vagaro, Mindbody, SimplePractice, and more without disrupting your current workflow."
     },
     {
-        title: "API Access",
-        description: "Get full access to our robust API with comprehensive documentation. Integrate our services seamlessly into your existing workflows and applications."
+        title: "Revenue Recovery",
+        description: "Intelligent overbooking, escalating reminders, and automated consequence management help recover lost revenue and reduce future no-shows by up to 45%."
     },
     {
-        title: "Support",
-        description: "24/7 priority support from our expert team. Get help when you need it with dedicated support channels and detailed documentation."
+        title: "24/7 Support",
+        description: "Expert support team available around the clock to help you maximize your no-show prevention and revenue recovery with dedicated onboarding and ongoing optimization."
     }
 ];

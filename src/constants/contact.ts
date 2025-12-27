@@ -1,19 +1,15 @@
-import { PhoneIcon, MailIcon, MapPinIcon } from "lucide-react";
+import { MailIcon, MapPinIcon } from "lucide-react";
+import { COMPANY_INFO } from "./company";
 
 export const CONTACT_CARDS = [
     {
-        title: "Phone Number",
-        value: "+1 (123) 456-7890",
-        icon: PhoneIcon
-    },
-    {
-        title: "Verve Address",
-        value: "Mumbai, India",
+        title: `${COMPANY_INFO.name} Address`,
+        value: "Bangalore, India",
         icon: MapPinIcon
     },
     {
         title: "Email Address",
-        value: "support@verve.com",
+        value: COMPANY_INFO.email.hello,
         icon: MailIcon
     }
 ] as const;

@@ -1,10 +1,10 @@
-import React from 'react'
-import Wrapper from "../global/wrapper"
-import Icons from "../global/icons"
-import Image from "next/image"
-import Container from "../global/container"
-import { Button } from "../ui/button"
-import { CheckCircle2Icon } from "lucide-react"
+import { COMPANY_INFO } from "@/constants";
+import { CheckCircle2Icon } from "lucide-react";
+import Image from "next/image";
+import Container from "../global/container";
+import Icons from "../global/icons";
+import Wrapper from "../global/wrapper";
+import { Button } from "../ui/button";
 
 const IntegrationsHero = () => {
     return (
@@ -18,7 +18,7 @@ const IntegrationsHero = () => {
                             <div className="flex items-center gap-x-1 px-2 py-1.5 relative w-max rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
                                 <Icons.stars className="size-5" />
                                 <span className="text-sm text-white">
-                                    Verve Our Integrations
+                                    {COMPANY_INFO.name} Integrations
                                 </span>
                             </div>
                         </Container>
@@ -40,13 +40,13 @@ const IntegrationsHero = () => {
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        Create posts, reels and stories
+                                        Seamless booking system integration
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        Publish your Facebook posts dynamically
+                                        Real-time appointment data sync
                                     </span>
                                 </div>
                             </div>

@@ -1,8 +1,8 @@
-import React from 'react'
-import Wrapper from "../global/wrapper";
-import Container from "../global/container";
+import { COMPANY_INFO } from "@/constants";
 import Image from "next/image";
+import Container from "../global/container";
 import Icons from "../global/icons";
+import Wrapper from "../global/wrapper";
 
 const OurStory = () => {
     return (
@@ -20,7 +20,7 @@ const OurStory = () => {
                         </Container>
                         <Container delay={0.1} className="flex grow">
                             <h2 className="text-3xl md:text-4xl font-semibold text-left mt-4">
-                                Expers in SaaS Development and Customer Success
+                                Software Engineers Solving Real Problems
                             </h2>
                         </Container>
                         <Container delay={0.3} className="mt-auto">
@@ -35,7 +35,7 @@ const OurStory = () => {
                                     />
                                 </div>
                                 <p className="text-base md:text-lg text-muted-foreground text-left mt-2 max-w-2xl">
-                                    We are a team of experienced professionals in SaaS development and customer success
+                                    {COMPANY_INFO.team.expertise} experts founded {COMPANY_INFO.founded.month} {COMPANY_INFO.founded.year} to solve the $150B annual no-show problem
                                 </p>
                             </div>
                         </Container>
@@ -51,10 +51,10 @@ const OurStory = () => {
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl lg:text-2xl font-semibold font-heading">
-                                    12 Years of intense research
+                                    Founded July 2025
                                 </h4>
                                 <div className="mt-2 text-base text-neutral-400">
-                                    Our journey began over a decade ago, driven by a passion for innovation and a commitment to excellence in SaaS solutions.
+                                    Founded by a software engineer who discovered the massive no-show problem affecting healthcare clinics, salons, spas, and other appointment-based businesses.
                                 </div>
                             </div>
                         </Container>
@@ -67,11 +67,10 @@ const OurStory = () => {
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl lg:text-2xl font-semibold font-heading">
-                                    25 Years of evolving
-                                    experience
+                                    5 months of rapid growth
                                 </h4>
                                 <div className="mt-2 text-base text-neutral-400">
-                                    Our team continuously adapts to the ever-changing landscape of technology and the evolving needs of our customers.
+                                    Since July 2025, we've grown from beta testing to serving {COMPANY_INFO.metrics.practicesServed} practices with {COMPANY_INFO.product.accuracy} prediction accuracy.
                                 </div>
                             </div>
                         </Container>
@@ -84,10 +83,10 @@ const OurStory = () => {
                             </div>
                             <div className="flex-1">
                                 <h4 className="text-xl lg:text-2xl font-semibold font-heading">
-                                    Growing team day by day
+                                    {COMPANY_INFO.metrics.revenueRecovered} revenue recovered
                                 </h4>
                                 <div className="mt-2 text-base text-neutral-400">
-                                    Our team is growing every day to achieve even better results for our clients.
+                                    In just 5 months, {COMPANY_INFO.name} has protected {COMPANY_INFO.metrics.practicesServed} practices and recovered {COMPANY_INFO.metrics.revenueRecovered} in prevented revenue loss.
                                 </div>
                             </div>
                         </Container>

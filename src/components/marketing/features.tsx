@@ -1,8 +1,7 @@
-import React from 'react'
+import { COMPANY_INFO, FEATURES } from "@/constants";
+import Image from "next/image";
 import Container from "../global/container";
 import Wrapper from "../global/wrapper";
-import { FEATURES } from "@/constants";
-import Image from "next/image";
 
 const Features = () => {
     return (
@@ -14,7 +13,7 @@ const Features = () => {
                             Build a solution that wins you <br /> more customers
                         </h2>
                         <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-center max-w-md mt-2">
-                            Experience the power of Verve with our easy-to-use notebook solution. Get started in minutes
+                            Experience the power of {COMPANY_INFO.name} with our AI-driven no-show prevention platform. Get started in minutes
                         </p>
                     </div>
                 </Container>

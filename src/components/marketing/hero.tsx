@@ -1,8 +1,8 @@
-import React from 'react'
-import Wrapper from "../global/wrapper";
-import Icons from "../global/icons";
+import { COMPANY_INFO } from "@/constants";
 import Image from "next/image";
 import Container from "../global/container";
+import Icons from "../global/icons";
+import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 
 const Hero = () => {
@@ -25,27 +25,27 @@ const Hero = () => {
                         <div className="flex items-center justify-center gap-x-1 px-2 py-1.5 relative w-max mx-auto rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
                             <Icons.stars className="size-5" />
                             <span className="text-sm text-white">
-                                Verve Product Overview
+                                AI-Powered No-Show Prevention
                             </span>
                         </div>
                     </Container>
 
                     <Container delay={0.1}>
                         <h2 className="text-balance !leading-[1.25] text-center text-5xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
-                            Deliver an Enterprise <br className="hidden lg:inline-block" /> Quality Project in Minutes
+                            Stop No-Shows Before <br className="hidden lg:inline-block" /> They Happen
                         </h2>
                     </Container>
 
                     <Container delay={0.2}>
                         <p className="text-base md:text-lg font-normal text-center text-balance text-muted-foreground max-w-3xl mx-auto mt-4">
-                            Effortlessly launch robust, production-ready projects with best-in-class tools and seamless workflows—no complex setup required
+                            {COMPANY_INFO.description}
                         </p>
                     </Container>
 
                     <Container delay={0.3}>
                         <div className="mt-6">
-                            <Button size="md">
-                                Get started for free
+                            <Button href="/contact" size="md">
+                                Book a Call
                             </Button>
                         </div>
                     </Container>
@@ -55,7 +55,7 @@ const Hero = () => {
 
                             <div className="rounded-lg md:rounded-[24px] border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-black">
                                 <Image
-                                    src="/images/dashboard.png"
+                                    src="/images/Screenshot/Shot1.webp"
                                     alt="Dashboard"
                                     priority
                                     width={2932}

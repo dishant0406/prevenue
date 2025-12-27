@@ -11,10 +11,6 @@ export const NAV_LINKS = [
         name: "Pricing",
         link: "/pricing",
     },
-    {
-        name: "Blog",
-        link: "/blog",
-    },
 ];
 
 export const PRODUCT_LINKS = [
@@ -25,9 +21,9 @@ export const PRODUCT_LINKS = [
 ];
 
 export const RESOURCES_LINKS = [
-    { label: "Blog", href: "/blog" },
-    { label: "Help Center", href: "/help" },
-    { label: "API Docs", href: "/docs" },
+    // { label: "Help Center", href: "/help" },
+    // { label: "API Docs", href: "/docs" },
     { label: "Contact Us", href: "/contact" },
+    {label: "Sitemap", href: "/sitemap.xml" },
 ];
 

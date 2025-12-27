@@ -1,20 +1,16 @@
 "use client";
 
+import { COMPANY_INFO } from "@/constants";
 import { MARQUEE_ITEMS, PRICING_PLANS } from "@/constants/pricing";
 import { cn } from "@/lib";
-import NumberFlow from '@number-flow/react';
 import { CheckCircle2Icon } from "lucide-react";
-import { useState } from 'react';
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
 import { Button } from "../ui/button";
 import { Marquee } from "../ui/marquee";
-import { Switch } from "../ui/switch";
 
 const PricingHero = () => {
-
-    const [isYearly, setIsYearly] = useState<boolean>(false)
 
     return (
         <div className="relative z-0 w-full h-full">
@@ -27,53 +23,29 @@ const PricingHero = () => {
                         <div className="flex items-center justify-center gap-x-1 px-2 py-1.5 relative w-max mx-auto rounded-full before:absolute before:inset-0 before:-z-10 before:p-[1px] before:rounded-3xl before:bg-gradient-to-b before:from-neutral-700 before:to-neutral-900 before:content-[''] after:absolute after:inset-[1px] after:-z-10 after:rounded-[22px] after:bg-[#181818]/60">
                             <Icons.stars className="size-5" />
                             <span className="text-sm text-white">
-                                Verve Product Overview
+                                {COMPANY_INFO.name} Pricing Plans
                             </span>
                         </div>
                     </Container>
 
                     <Container delay={0.1}>
                         <h2 className="text-balance !leading-[1.25] text-center text-4xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
-                            Our Plans Scale With <br className="hidden lg:inline-block" /> Your Business
+                            Custom Solutions <br className="hidden lg:inline-block" /> Built for Your Practice
                         </h2>
                     </Container>
 
                     <Container delay={0.2}>
                         <p className="text-base md:text-lg font-normal text-center text-balance text-muted-foreground max-w-3xl mx-auto mt-4">
-                            Choose the perfect plan that aligns with your business needs. Start small and scale as you grow
+                            Every practice is unique. Let&apos;s discuss your specific needs and build a solution that maximizes your revenue protection and fits seamlessly into your workflow.
                         </p>
                     </Container>
 
-                    <Container delay={0.3}>
-                        <div className="flex items-center gap-4 mt-8">
-                            <span className="text-sm font-medium">
-                                Monthly
-                            </span>
-                            <Switch
-                                checked={isYearly}
-                                onCheckedChange={setIsYearly}
-                                className="cursor-pointer"
-                            />
-                            <div className="flex items-center gap-2">
-                                <span className="text-sm font-medium">
-                                    Yearly
-                                </span>
-                                <span className="text-xs text-primary font-medium px-2 py-1 rounded-full bg-primary/10">
-                                    30% Off
-                                </span>
-                            </div>
-                        </div>
-                    </Container>
-
-                    <Container delay={0.4} className="w-full">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full mt-16">
+                    <Container delay={0.3} className="w-full">
+                        <div className="flex justify-center w-full mt-16">
                             {PRICING_PLANS.map((plan, index) => (
                                 <div
                                     key={index}
-                                    className={cn(
-                                        "flex flex-col p-8 rounded-2xl bg-card border-[1.5px] w-full",
-                                        plan.popular ? "border-primary" : "border-border"
-                                    )}
+                                    className="flex flex-col p-8 rounded-2xl bg-card border-[1.5px] w-full max-w-lg border-primary"
                                 >
                                     <div className="flex items-start justify-between">
                                         <div className="space-y-2">
@@ -83,19 +55,7 @@ const PricingHero = () => {
                                                 </span>
                                             </div>
                                             <h3 className="text-2xl lg:text-4xl font-semibold mt-4">
-                                                <NumberFlow
-                                                    value={isYearly ? plan.price.yearly : plan.price.monthly}
-                                                    format={{
-                                                        currency: "USD",
-                                                        style: "currency",
-                                                        minimumFractionDigits: 0,
-                                                        maximumFractionDigits: 0,
-                                                    }}
-                                                    className="text-2xl lg:text-4xl font-semibold mt-4"
-                                                />{" "}
-                                                <span className="text-base font-normal text-muted-foreground">
-                                                    /{isYearly ? "year" : "month"}
-                                                </span>
+                                                {plan.name}
                                             </h3>
                                             <p className="text-sm text-muted-foreground">
                                                 {plan.description}
@@ -121,6 +81,7 @@ const PricingHero = () => {
 
                                     <Button
                                         className="mt-8 w-full"
+                                        href={plan.buttonLink || "#"}
                                         variant={plan.popular ? "default" : "outline"}
                                     >
                                         {plan.buttonText}

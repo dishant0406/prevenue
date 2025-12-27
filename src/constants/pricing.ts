@@ -13,50 +13,37 @@ export type Plan = {
     features: PlanFeature[];
     buttonText: string;
     popular?: boolean;
+    buttonLink?: string;
 };
 
 export const PRICING_PLANS: Plan[] = [
     {
-        name: "Basic Plan",
-        badge: "Basic",
-        description: "Perfect for getting started",
+        name: "Custom Solution",
+        badge: "Tailored for You",
+        description: "Every practice is unique. We'll build a solution that fits your specific needs.",
         price: {
-            monthly: 12,
-            yearly: 115,
+            monthly: 0,
+            yearly: 0,
         },
         features: [
-            { text: "Developer docs" },
-            { text: "Submit cases to support" },
-            { text: "API status notifications" },
-            { text: "Troubleshooting" },
+            { text: "Custom AI model training for your practice" },
+            { text: "Personalized integration with your booking systems" },
+            { text: "Dedicated setup and onboarding" },
+            { text: "Industry-specific optimization" },
+            { text: "Ongoing support and optimization" },
+            { text: "Revenue recovery guarantee" },
         ],
-        buttonText: "Start with Basic",
-    },
-    {
-        name: "Popular Plan",
-        badge: "Popular",
-        description: "Best for growing teams",
-        price: {
-            monthly: 40,
-            yearly: 384,
-        },
-        features: [
-            { text: "Developer docs" },
-            { text: "Submit cases to support" },
-            { text: "API status notifications" },
-            { text: "Troubleshooting" },
-        ],
-        buttonText: "Start with Pro",
-        popular: true,
+        buttonText: "Book a Call",
+        buttonLink: "/contact",
     }
 ];
 
 export const MARQUEE_ITEMS = [
-    "Seamless Success",
-    "Efficient Excellence",
-    "Empowering Growth",
-    "Innovative Simplicity",
-    "Scalable Solutions",
-    "Reliable Performance",
-    "Global Reach"
+    "Prevent No-Shows",
+    "Maximize Revenue",
+    "AI-Powered Insights",
+    "Smart Scheduling",
+    "Reduce Lost Income",
+    "Predictive Analytics",
+    "Automated Solutions"
 ];

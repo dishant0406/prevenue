@@ -1,7 +1,7 @@
-import React from 'react'
-import Wrapper from "../global/wrapper";
-import Container from "../global/container";
+import { COMPANY_INFO } from "@/constants";
 import Image from "next/image";
+import Container from "../global/container";
+import Wrapper from "../global/wrapper";
 
 const HowItWorks = () => {
     return (
@@ -10,11 +10,11 @@ const HowItWorks = () => {
                 <Container>
                     <div className="flex flex-col lg:flex-row items-start justify-start lg:items-end lg:justify-between px-2 md:px-0">
                         <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-start tracking-tight">
-                            Discover a simple
-                            <br /> notebook solution today
+                            Discover how AI prevents
+                            <br /> no-shows automatically
                         </h2>
                         <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-start mt-4 lg:mt-0 max-w-md">
-                            Experience the power of Verve with our easy-to-use notebook solution. Get started in minutes
+                            Experience the power of {COMPANY_INFO.name} with our AI-driven no-show prevention platform. Get started in minutes
                         </p>
                     </div>
                 </Container>
@@ -37,10 +37,10 @@ const HowItWorks = () => {
                                 </div>
                                 <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
                                     <h4 className="text-xl lg:text-2xl font-medium">
-                                        Express ideas like a human, <br /> not a machine
+                                        AI analyzes your <br /> appointment patterns
                                     </h4>
                                     <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        Verve's notebook solution allows you to write and express your ideas naturally
+                                        {COMPANY_INFO.name}&apos;s AI platform analyzes your appointment patterns to identify high-risk clients
                                     </p>
                                 </div>
                             </div>
@@ -59,9 +59,9 @@ const HowItWorks = () => {
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 border border-border hover:border-primary/40 transition-all duration-300 ease-out rounded-xl p-2">
                             <div className="flex w-full">
-                                <div className="w-full border border-border/50 rounded-lg">
+                                <div className="w-full border overflow-hidden border-border/50 rounded-lg">
                                     <Image
-                                        src="/images/hiw2.svg"
+                                        src="/images/Screenshot/Shot-3.webp"
                                         alt="02"
                                         width={1024}
                                         height={1024}
@@ -84,10 +84,10 @@ const HowItWorks = () => {
                                 </div>
                                 <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
                                     <h4 className="text-xl lg:text-2xl font-medium">
-                                        Build your <br /> model block by block
+                                        Smart prevention <br /> happens automatically
                                     </h4>
                                     <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        Verve's notebook solution allows you to build your model step by step, ensuring clarity and control
+                                        {COMPANY_INFO.name}&apos;s intelligent system automatically prevents revenue loss through smart overbooking and reminders
                                     </p>
                                 </div>
                             </div>
@@ -109,21 +109,21 @@ const HowItWorks = () => {
                                 </div>
                                 <div className="flex flex-col justify-end gap-1.5 mt-6 lg:mt-auto grow h-full">
                                     <h4 className="text-xl lg:text-2xl font-medium">
-                                        Express ideas like a <br /> human, not a machine
+                                        Revenue protection <br /> with smart consequences
                                     </h4>
                                     <p className="text-sm lg:text-base text-muted-foreground text-balance">
-                                        Verve's notebook solution allows you to write and express your ideas naturally
+                                        {COMPANY_INFO.name}&apos;s automated system manages consequences for repeat no-shows, training clients for better attendance
                                     </p>
                                 </div>
                             </div>
                             <div className="flex w-full">
-                                <div className="w-full border border-border/50 rounded-lg">
+                                <div className="w-full border overflow-hidden border-border/50 rounded-lg">
                                     <Image
-                                        src="/images/hiw3.svg"
+                                        src="/images/Screenshot/Shot-2.webp"
                                         alt="03"
                                         width={1024}
                                         height={1024}
-                                        className="size-full object-cover"
+                                        className="size-full scale-110 object-cover"
                                     />
                                 </div>
                             </div>
