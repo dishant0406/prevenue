@@ -1,32 +1,32 @@
 export const FEATURES = [
     {
-        title: "AI Predictive Analysis",
-        desc: "Advanced machine learning algorithms analyze patient patterns, appointment history, and behavioral data to predict no-shows before they happen.",
+        title: "Autonomous Call & Inquiry Handling",
+        desc: "AI autonomously handles incoming calls, inquiries, and appointment scheduling 24/7 with natural conversation capabilities and instant booking.",
         icon: "/icons/pie.svg",
     },
     {
-        title: "Smart Integration",
-        desc: "Seamlessly connects with your existing booking systems like Vagaro, Mindbody, SimplePractice, and more without disrupting your workflow.",
+        title: "Predictive No-Show Prevention",
+        desc: "Advanced machine learning analyzes patient patterns and behavioral data to predict and prevent no-shows before they happen, reducing losses by 45%.",
         icon: "/icons/computer.svg",
     },
     {
-        title: "Intelligent Overbooking",
-        desc: "Automatically manages your schedule by strategically overbooking high-risk slots with waitlist clients to maximize revenue.",
+        title: "Intelligent Scheduling & Overbooking",
+        desc: "Smart scheduling optimizes appointments, manages conflicts, and strategically overbooks high-risk slots with waitlist clients for maximum revenue.",
         icon: "/icons/label.svg",
     },
     {
-        title: "Escalating Reminders",
-        desc: "Dynamic reminder system that adapts to individual client risk levels with personalized messaging and timing.",
+        title: "Automated Reminders & Consequences",
+        desc: "Dynamic reminder system adapts to client risk levels while implementing smart consequence management for repeat no-shows and missed appointments.",
         icon: "/icons/crown.svg",
     },
     {
-        title: "Automated Consequences",
-        desc: "Smart penalty system that flags repeat offenders, requires deposits, and restricts scheduling to reduce future no-shows.",
+        title: "Complete Follow-up Automation",
+        desc: "Handles post-appointment care instructions, review requests, rebooking reminders, and satisfaction surveys while tracking appointment outcomes.",
         icon: "/icons/cursor.svg",
     },
     {
-        title: "Real-time Analytics",
-        desc: "Comprehensive dashboard showing no-show predictions, revenue recovery, and actionable insights to optimize your practice.",
+        title: "Revenue Protection Analytics",
+        desc: "Comprehensive dashboard showing no-show predictions, revenue recovery, booking patterns, and actionable insights to optimize your practice.",
         icon: "/icons/clock.svg",
     },
 ];

@@ -6,17 +6,16 @@ import { generateMetadata } from "@/utils";
 
 export const metadata = generateMetadata({
     title: "Integrations",
-    description: "Prevenue seamlessly integrates with popular booking systems including Vagaro, Mindbody, SimplePractice, Square Appointments, and more. Connect your existing workflow with AI-powered no-show prevention.",
+    description: "Prevenue's autonomous booking management platform seamlessly integrates with Vagaro, Mindbody, SimplePractice, Square Appointments, and more while providing advanced no-show prevention.",
     url: "/integrations",
     keywords: [
         "prevenue integrations",
+        "booking management integration",
         "vagaro integration",
         "mindbody integration",
         "simplepractice integration",
-        "square appointments",
-        "booking system integration",
-        "healthcare software integration",
-        "salon software integration"
+        "appointment software integration",
+        "no-show prevention integration"
     ]
 });
 const IntegrationsPage = () => {

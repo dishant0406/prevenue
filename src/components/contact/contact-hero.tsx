@@ -1,8 +1,7 @@
-import React from 'react'
-import Wrapper from "../global/wrapper"
-import Icons from "../global/icons"
-import Container from "../global/container"
 import { CONTACT_CARDS } from "@/constants";
+import Container from "../global/container";
+import Icons from "../global/icons";
+import Wrapper from "../global/wrapper";
 
 const ContactHero = () => {
     return (
@@ -28,7 +27,7 @@ const ContactHero = () => {
 
                     <Container delay={0.2}>
                         <p className="text-base md:text-lg font-normal text-center text-balance text-muted-foreground max-w-3xl mx-auto mt-4">
-                            Have questions or want to learn more? We're here to help. Reach out to our team and let's discuss how we can support your needs
+                            Ready to automate your booking management while preventing no-shows? Let&apos;s discuss how Prevenue can transform your practice and protect your revenue.
                         </p>
                     </Container>
 

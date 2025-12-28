@@ -25,13 +25,13 @@ const IntegrationsHero = () => {
 
                         <Container delay={0.1}>
                             <h2 className="text-balance !leading-[1.25] text-4xl md:text-6xl font-semibold tracking-tight mt-6 w-full">
-                                Deploy your Project <br className="hidden lg:inline-block" /> with the Right Tools
+                                Seamless Integration <br className="hidden lg:inline-block" /> with Your Booking System
                             </h2>
                         </Container>
 
                         <Container delay={0.2}>
                             <p className="text-base md:text-lg font-normal text-balance text-muted-foreground max-w-3xl mt-4">
-                                Seamlessly integrate your favorite tools and platforms. Build, deploy, and scale your applications with our comprehensive suite of integrations.
+                                Connect {COMPANY_INFO.name}&apos;s autonomous booking management and no-show prevention platform with your existing systems. Deploy seamlessly without disrupting your workflow.
                             </p>
                         </Container>
 

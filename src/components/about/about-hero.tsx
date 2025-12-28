@@ -41,13 +41,13 @@ const AboutHero = () => {
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        AI-powered no-show prediction
+                                        Complete booking workflow automation
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <CheckCircle2Icon className="size-4 text-primary" />
                                     <span className="text-sm text-muted-foreground font-medium">
-                                        Automated intelligent overbooking
+                                        Advanced no-show prediction & prevention
                                     </span>
                                 </div>
                             </div>

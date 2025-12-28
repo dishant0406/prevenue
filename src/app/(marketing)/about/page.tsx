@@ -8,16 +8,16 @@ import { generateMetadata } from "@/utils";
 
 export const metadata = generateMetadata({
     title: "About Us",
-    description: "Learn about Prevenue's mission to solve the $150B annual no-show problem across industries. Founded by a software engineer, our AI platform helps healthcare, salons, spas and service businesses prevent revenue loss.",
+    description: "Learn about Prevenue's autonomous booking management platform with advanced no-show prevention. Founded by software engineers, we help appointment-based businesses automate workflows while protecting revenue from no-shows.",
     url: "/about",
     keywords: [
         "about prevenue",
+        "AI booking management platform",
         "no-show prevention company",
-        "AI scheduling solutions",
-        "appointment management software",
-        "revenue protection platform",
-        "cross-industry technology",
-        "appointment scheduling AI"
+        "autonomous scheduling software",
+        "appointment management solutions",
+        "revenue protection technology",
+        "booking automation platform"
     ]
 });
 

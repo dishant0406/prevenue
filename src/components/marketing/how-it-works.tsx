@@ -10,11 +10,11 @@ const HowItWorks = () => {
                 <Container>
                     <div className="flex flex-col lg:flex-row items-start justify-start lg:items-end lg:justify-between px-2 md:px-0">
                         <h2 className="text-3xl lg:text-4xl font-semibold text-left lg:text-start tracking-tight">
-                            Discover how AI prevents
-                            <br /> no-shows automatically
+                            Complete booking management
+                            <br /> with no-show prevention
                         </h2>
                         <p className="text-base lg:text-lg font-normal text-muted-foreground text-left lg:text-start mt-4 lg:mt-0 max-w-md">
-                            Experience the power of {COMPANY_INFO.name} with our AI-driven no-show prevention platform. Get started in minutes
+                            Experience {COMPANY_INFO.name}&apos;s autonomous booking platform that handles everything while preventing revenue loss from no-shows
                         </p>
                     </div>
                 </Container>

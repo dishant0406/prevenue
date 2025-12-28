@@ -39,16 +39,17 @@ export const generateMetadata = ({
     ],
     noIndex = false,
     keywords = [
+        "AI booking management",
+        "autonomous appointment scheduling", 
         "no-show prevention",
-        "AI scheduling",
-        "appointment reminders", 
+        "appointment management software",
+        "intelligent call handling",
+        "automated follow-ups",
         "revenue protection",
-        "practice management",
-        "predictive analytics",
-        "appointment booking",
-        "healthcare software",
-        "salon software",
-        "veterinary software"
+        "practice automation",
+        "healthcare booking software",
+        "salon management platform",
+        "veterinary appointment system"
     ]
 }: {
     title?: string;
@@ -61,7 +62,7 @@ export const generateMetadata = ({
     keywords?: string[];
 } = {}): Metadata => {
     
-    const fullTitle = title ? `${title} | ${DEFAULT_TITLE}` : `${DEFAULT_TITLE} - Stop No-Shows Before They Happen`;
+    const fullTitle = title ? `${title} | ${DEFAULT_TITLE}` : `${DEFAULT_TITLE} - Autonomous Booking Management with AI-Powered No-Show Prevention`;
     const fullUrl = url.startsWith('http') ? url : `${DEFAULT_URL}${url}`;
     const imageUrl = image?.startsWith('http') ? image : `${DEFAULT_URL}${image}`;
 
@@ -92,7 +93,7 @@ export const generateMetadata = ({
                     url: imageUrl,
                     width: 1200,
                     height: 630,
-                    alt: `${title || DEFAULT_TITLE} - AI-powered no-show prevention`,
+                    alt: `${title || DEFAULT_TITLE} - Autonomous booking management with no-show prevention`,
                 },
             ],
             locale: "en_US",

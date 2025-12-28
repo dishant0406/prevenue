@@ -10,18 +10,18 @@ import { generateMetadata } from "@/utils";
 
 export const metadata = generateMetadata({
     title: undefined, // Uses default title
-    description: "Stop no-shows before they happen with Prevenue's AI-powered predictive platform. Reduce no-shows by 45%, recover lost revenue through intelligent overbooking, and protect your business revenue automatically across healthcare, salons, and service industries.",
+    description: "Autonomous AI booking management platform that handles calls, inquiries, appointments, and follow-ups while preventing no-shows through predictive analytics. Reduce no-shows by 45% and automate your entire booking workflow.",
     keywords: [
+        "AI booking management",
         "no-show prevention",
-        "AI appointment scheduling",
+        "autonomous appointment scheduling",
         "predictive analytics",
-        "appointment reminder software", 
-        "business revenue protection",
-        "intelligent overbooking",
-        "salon appointment software",
+        "appointment management software", 
+        "intelligent call handling",
+        "automated follow-ups",
         "healthcare scheduling AI",
-        "veterinary appointment management",
-        "automated appointment system"
+        "salon management software",
+        "business automation platform"
     ]
 });
 

@@ -36,7 +36,7 @@ const PricingHero = () => {
 
                     <Container delay={0.2}>
                         <p className="text-base md:text-lg font-normal text-center text-balance text-muted-foreground max-w-3xl mx-auto mt-4">
-                            Every practice is unique. Let&apos;s discuss your specific needs and build a solution that maximizes your revenue protection and fits seamlessly into your workflow.
+                            Every practice is unique. Let&apos;s discuss your specific booking management and no-show prevention needs to build a solution that maximizes your efficiency and revenue protection.
                         </p>
                     </Container>
 
@@ -70,7 +70,7 @@ const PricingHero = () => {
                                                 plan.popular && ""
                                             )}>
                                                 <CheckCircle2Icon className={cn(
-                                                    "size-4 text-muted-foreground fill-muted-foreground/20",
+                                                    "w-4 h-4 min-w-4 flex-shrink-0 text-muted-foreground fill-muted-foreground/20",
                                                 )} />
                                                 <span className="text-sm">
                                                     {feature.text}

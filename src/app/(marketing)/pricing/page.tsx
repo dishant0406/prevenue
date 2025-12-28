@@ -6,15 +6,15 @@ import { generateMetadata } from "@/utils"
 
 export const metadata = generateMetadata({
     title: "Custom Pricing",
-    description: "Book a call to discuss custom Prevenue solutions tailored for your practice. Our AI-powered no-show prevention platform offers personalized pricing based on your specific needs and practice size.",
+    description: "Book a call to discuss custom Prevenue solutions for your practice. Our autonomous booking management platform with advanced no-show prevention offers personalized pricing based on your needs.",
     url: "/pricing",
     keywords: [
         "prevenue pricing",
-        "no-show prevention cost",
+        "booking management cost",
+        "no-show prevention pricing",
         "custom AI solutions",
-        "practice management pricing",
-        "healthcare software cost",
-        "appointment scheduling pricing",
+        "practice automation pricing",
+        "appointment management cost",
         "revenue protection investment"
     ]
 });

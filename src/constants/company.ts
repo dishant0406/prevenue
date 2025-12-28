@@ -1,9 +1,9 @@
 // Company Information Constants
 export const COMPANY_INFO = {
     name: "Prevenue",
-    tagline: "Stop No-Shows Before They Happen",
-    description: "AI-powered predictive no-show prevention platform that helps practices reduce no-shows by up to 45% and recover lost revenue through intelligent scheduling, automated reminders, and consequence management.",
-    shortDescription: "AI-powered no-show prevention that protects your revenue",
+    tagline: "Autonomous Booking Management with AI-Powered No-Show Prevention",
+    description: "Complete AI-powered booking management platform that autonomously handles calls, inquiries, appointments, and follow-ups while preventing no-shows through advanced predictive analytics. Reduce no-shows by 45% while automating your entire booking workflow.",
+    shortDescription: "AI booking management platform with advanced no-show prevention",
     
     // Contact Information
     email: {

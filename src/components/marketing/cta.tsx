@@ -15,7 +15,7 @@ const CTA = () => {
                     <div className="flex flex-col items-start justify-center w-full">
                         <Container className="w-max mx-auto">
                             <h2 className="text-3xl lg:text-5xl leading-tight text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-400 font-semibold">
-                                Ready to Stop <br /> Revenue Loss?
+                                Ready to Automate Bookings <br /> & Stop Revenue Loss?
                             </h2>
                             <div className="flex items-center gap-4 mt-6">
                                 <div className="flex items-center gap-2">
