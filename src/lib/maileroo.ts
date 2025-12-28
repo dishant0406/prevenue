@@ -203,4 +203,5 @@ class MailerooService {
 export const maileroo = new MailerooService(process.env.MAILEROO_API_KEY!);
 
 // Export types for use in other files
-export type { AttachmentObject, EmailObject, MailerooEmailRequest, MailerooResponse, MailerooErrorResponse };
+export type { AttachmentObject, EmailObject, MailerooEmailRequest, MailerooErrorResponse, MailerooResponse };
+
