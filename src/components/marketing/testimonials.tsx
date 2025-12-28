@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import { FAQS, TESTIMONIALS } from "@/constants";
-import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
+import Wrapper from "@/components/global/wrapper";
+import { TESTIMONIALS } from "@/constants";
+import Image from "next/image";
 import { Marquee } from "../ui/marquee";
 
 type Testimonial = {
@@ -27,12 +26,12 @@ const Testimonials = () => {
                             <Item key={item.name} item={item} />
                         ))}
                     </Marquee>
-                    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+                    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[var(--dark)]"></div>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[var(--dark)]"></div>
                 </div>
             </Wrapper>
-            <div className="absolute hidden lg:block top-1/4 left-1/4 w-1/8 h-16 rounded-full bg-primary/80 -z-10 blur-[6rem]"></div>
-            <div className="absolute hidden lg:block top-1/4 right-1/4 w-1/8 h-16 rounded-full bg-primary/80 -z-10 blur-[6rem]"></div>
+            <div className="absolute hidden lg:block top-1/4 left-1/4 w-1/8 h-16 rounded-full bg-[var(--dark)]/80 -z-10 blur-[6rem]"></div>
+            <div className="absolute hidden lg:block top-1/4 right-1/4 w-1/8 h-16 rounded-full bg-[var(--dark)]/80 -z-10 blur-[6rem]"></div>
         </div>
     )
 };

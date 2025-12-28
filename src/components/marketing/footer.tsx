@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="relative pt-16 pb-8 md:pb-0 w-full overflow-hidden">
             <Wrapper>
                 <Container animation="scaleUp" delay={0.3}>
-                    <div className="absolute top-0 w-4/5 mx-auto inset-x-0 h-px bg-gradient-to-r from-[#050505] via-primary/40 to-[#050505]"></div>
+                    <div className="absolute top-0 w-4/5 mx-auto inset-x-0 h-px bg-gradient-to-r from-[var(--dark)] via-primary/40 to-[var(--dark)]"></div>
                 </Container>
 
                 <div className="grid gap-8 xl:grid-cols-2 xl:gap-8">

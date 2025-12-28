@@ -65,7 +65,7 @@ const AboutHero = () => {
                     <Container className="w-full z-30">
                         <div className="">
                             <Image
-                                src="/images/about/hero.svg"
+                                src="/images/about/scopes.webp"
                                 alt="About"
                                 priority
                                 width={2932}

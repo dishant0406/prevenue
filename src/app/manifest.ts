@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'AI-powered predictive no-show prevention platform that helps practices reduce no-shows by up to 45% and recover lost revenue.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#050505',
+    background_color: '#0b1011',
     theme_color: '#18b8b3',
     icons: [
       {

@@ -29,8 +29,8 @@ const Companies = () => {
                                 <Image src="/images/company/bar.png" alt="Bar" width={1024} height={1024} className="w-24 h-8" />
                             </div>
                         </Marquee>
-                        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+                        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[var(--dark)]"></div>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[var(--dark)]"></div>
                     </div>
                 </Container>
             </Wrapper>

@@ -1,5 +1,5 @@
 import Providers from "@/components/global/providers";
-import { base, heading } from "@/constants/fonts";
+import { agrandir } from "@/constants/fonts";
 import { cn } from "@/lib";
 import "@/styles/globals.css";
 import { generateMetadata, generateOrganizationJsonLd, generateSoftwareApplicationJsonLd } from "@/utils";
@@ -32,9 +32,8 @@ export default function RootLayout({
             </head>
             <body
                 className={cn(
-                    "min-h-screen bg-[#050505] text-foreground font-base antialiased dark",
-                    base.variable,
-                    heading.variable,
+                    "min-h-screen bg-[#0b1011] text-foreground font-base antialiased dark",
+                    agrandir.variable,
                 )}
             >
                 <Providers>
