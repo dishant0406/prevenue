@@ -7,13 +7,13 @@ export const COMPANY_INFO = {
     
     // Contact Information
     email: {
-        hello: "hello@prevenue.io",
-        support: "support@prevenue.io",
-        sales: "sales@prevenue.io"
+        hello: "hello@prevenue.in",
+        support: "support@prevenue.in",
+        sales: "sales@prevenue.in"
     },
     
     // URLs and Social
-    domain: "https://prevenue.io",
+    domain: "https://prevenue.in",
     twitter: "@prevenue_io",
     linkedin: "https://linkedin.com/company/prevenue_io",
     
