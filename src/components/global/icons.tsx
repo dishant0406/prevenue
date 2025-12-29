@@ -25,9 +25,9 @@ const Icons = {
             <Image
                 src="/Logo/prevenue.webp"
                 alt={`${COMPANY_INFO.name} Logo`}
-                width={100}
+                width={49}
                 height={33}
-                className={cn("flex-shrink-0", props.className)}
+                className={cn("flex-shrink-0 max-h-[33px] object-contain", props.className)}
                 priority
             />
             <p className="ml-2 text-xl font-semibold whitespace-nowrap flex-shrink-0">{COMPANY_INFO.name}</p>
