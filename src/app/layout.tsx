@@ -3,6 +3,7 @@ import { agrandir } from "@/constants/fonts";
 import { cn } from "@/lib";
 import "@/styles/globals.css";
 import { generateMetadata, generateOrganizationJsonLd, generateSoftwareApplicationJsonLd } from "@/utils";
+import Script from "next/script";
 
 export const metadata = generateMetadata({
     title: undefined, // Uses default title
@@ -36,6 +37,11 @@ export default function RootLayout({
                     agrandir.variable,
                 )}
             >
+                <Script
+                    src={process.env.NEXT_PUBLIC_BEAM_ANALYTICS_URL}
+                    data-token={process.env.NEXT_PUBLIC_BEAM_ANALYTICS_TOKEN}
+                    strategy="afterInteractive"
+                />
                 <Providers>
                     {children}
                 </Providers>
