@@ -89,6 +89,13 @@ export const generateMetadata = ({
         publisher: DEFAULT_TITLE,
         category: 'business',
         classification: 'Business Software',
+        viewport: {
+            width: 'device-width',
+            initialScale: 1,
+            maximumScale: 1,
+            userScalable: false,
+            viewportFit: 'cover',
+        },
         formatDetection: {
             email: false,
             address: false,

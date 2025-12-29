@@ -34,8 +34,8 @@ const Navbar = () => {
 
     return (
         <header className={cn(
-            "fixed top-0 inset-x-0 z-50 w-full h-16 transition-all duration-300",
-            isScrolled ? "bg-[var(--dark)]/50 backdrop-blur-md" : "bg-transparent",
+            "fixed top-0 inset-x-0 z-50 w-full h-16 transition-all duration-300 safe-area-inset",
+            isScrolled ? "glass-effect" : "bg-transparent",
         )}>
 
             <Wrapper className="flex items-center justify-between">
@@ -43,8 +43,9 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
+                    className="navbar-logo"
                 >
-                    <LogoLink className="flex items-center gap-2">
+                    <LogoLink className="flex items-center gap-2 w-max h-6">
                         <Icons.logo className="w-max h-6" />
                     </LogoLink>
                 </motion.div>

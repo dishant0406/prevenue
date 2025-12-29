@@ -1,4 +1,5 @@
 import { COMPANY_INFO } from "@/constants";
+import { cn } from "@/lib/index";
 import { LucideProps } from "lucide-react";
 import Image from "next/image";
 
@@ -20,16 +21,16 @@ const Icons = {
         </svg>
     ),
     logo: (props: LucideProps) => (
-        <div className="flex items-center">
+        <div className="flex items-center max-w-full">
             <Image
                 src="/Logo/prevenue.webp"
                 alt={`${COMPANY_INFO.name} Logo`}
                 width={100}
                 height={33}
-                className={props.className}
+                className={cn("flex-shrink-0", props.className)}
                 priority
             />
-            <p className="ml-2 text-xl font-semibold">{COMPANY_INFO.name}</p>
+            <p className="ml-2 text-xl font-semibold whitespace-nowrap flex-shrink-0">{COMPANY_INFO.name}</p>
         </div>
     ),
     stars: (props: LucideProps) => (

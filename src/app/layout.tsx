@@ -33,9 +33,14 @@ export default function RootLayout({
             </head>
             <body
                 className={cn(
-                    "min-h-screen bg-[#0b1011] text-foreground font-base antialiased dark",
+                    "min-h-screen bg-[#0b1011] text-foreground font-base antialiased dark premium-container",
                     agrandir.variable,
                 )}
+                style={{
+                    WebkitFontSmoothing: 'antialiased',
+                    MozOsxFontSmoothing: 'grayscale',
+                    textRendering: 'optimizeLegibility',
+                }}
             >
                 <Script
                     src={process.env.NEXT_PUBLIC_BEAM_ANALYTICS_URL}
