@@ -7,7 +7,7 @@ import { CheckCircle2Icon } from "lucide-react";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
-import { Button } from "../ui/button";
+import { ClientButton } from "../ui/client-button";
 import { Marquee } from "../ui/marquee";
 
 const PricingHero = () => {
@@ -79,14 +79,14 @@ const PricingHero = () => {
                                         ))}
                                     </div>
 
-                                    <Button
+                                    <ClientButton
                                         className="mt-8 w-full"
                                         href={plan.buttonLink || "#"}
                                         variant={plan.popular ? "default" : "outline"}
                                         trackingSource="pricing_plan"
                                     >
                                         {plan.buttonText}
-                                    </Button>
+                                    </ClientButton>
                                 </div>
                             ))}
                         </div>

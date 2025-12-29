@@ -1,9 +1,12 @@
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-import Link from "next/link"
-import * as React from "react"
+"use client";
 
-import { cn } from "@/lib/index"
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import Link from "next/link";
+import * as React from "react";
+
+import { trackCTA } from "@/lib/beam-analytics";
+import { cn } from "@/lib/index";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive select-none cursor-pointer",
@@ -34,22 +37,50 @@ const buttonVariants = cva(
   }
 )
 
-interface ButtonProps extends VariantProps<typeof buttonVariants> {
+interface ClientButtonProps extends VariantProps<typeof buttonVariants> {
   className?: string
   asChild?: boolean
   href?: string
+  trackingSource?: string
+  children: React.ReactNode
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const Button = React.forwardRef<
+const ClientButton = React.forwardRef<
   HTMLButtonElement,
-  ButtonProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ButtonProps>
->(({ className, variant, size, asChild = false, href, children, ...props }, ref) => {
+  ClientButtonProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ClientButtonProps>
+>(({ className, variant, size, asChild = false, href, children, trackingSource, onClick, ...props }, ref) => {
   
+  // Enhanced click handler with tracking
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Track CTA clicks when href is present (indicates it's a CTA)
+    if (href && trackingSource) {
+      if (href === '/contact' || href.includes('contact')) {
+        trackCTA.bookCall(trackingSource);
+      } else {
+        trackCTA.generalClick(trackingSource, href);
+      }
+    }
+    
+    // Call original onClick if provided
+    onClick?.(event);
+  };
+
   if (href && !asChild) {
     return (
       <Link
         href={href}
         className={cn(buttonVariants({ variant, size, className }))}
+        onClick={() => {
+          // Track navigation clicks for links
+          if (trackingSource) {
+            if (href === '/contact' || href.includes('contact')) {
+              trackCTA.bookCall(trackingSource);
+            } else {
+              trackCTA.generalClick(trackingSource, href);
+            }
+          }
+        }}
       >
         {children}
       </Link>
@@ -62,12 +93,14 @@ const Button = React.forwardRef<
     <Comp
       className={cn(buttonVariants({ variant, size, className }))}
       ref={ref}
+      onClick={handleClick}
       {...props}
     >
       {children}
     </Comp>
   )
 })
-Button.displayName = "Button"
 
-export { Button, buttonVariants }
+ClientButton.displayName = "ClientButton"
+
+export { buttonVariants, ClientButton };

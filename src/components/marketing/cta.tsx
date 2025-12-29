@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Container from "../global/container";
 import Wrapper from "../global/wrapper";
-import { Button } from "../ui/button";
+import { ClientButton } from "../ui/client-button";
 
 const CTA = () => {
     return (
@@ -45,9 +45,9 @@ const CTA = () => {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mt-6">
-                                <Button href="/contact" size="lg" trackingSource="cta_section">
+                                <ClientButton href="/contact" size="lg" trackingSource="cta_section">
                                     Book a Call
-                                </Button>
+                                </ClientButton>
                                 <div className="flex flex-col">
                                     <span className="text-sm text-muted-foreground">
                                         {COMPANY_INFO.metrics.revenueRecovered} Revenue <br /> Recovered for {COMPANY_INFO.metrics.practicesServed} Practices

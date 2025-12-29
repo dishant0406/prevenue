@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { ClientButton } from "@/components/ui/client-button";
+import { LogoLink, NavLink } from "@/components/ui/nav-links";
 import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib";
-import { trackNavigation } from "@/lib/beam-analytics";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -44,13 +44,9 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
                 >
-                    <Link 
-                        href="/" 
-                        className="flex items-center gap-2"
-                        onClick={() => trackNavigation.logoClick()}
-                    >
-                        <Icons.logo className="h-6 w-auto" />
-                    </Link>
+                    <LogoLink className="flex items-center gap-2">
+                        <Icons.logo className="w-max h-6" />
+                    </LogoLink>
                 </motion.div>
 
                 <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-3 text-sm text-muted-foreground font-medium">
@@ -62,13 +58,13 @@ const Navbar = () => {
                                 delay={0.1 * index}
                             >
                                 <div className="relative">
-                                    <Link 
-                                        href={link.link} 
+                                    <NavLink 
+                                        href={link.link}
+                                        name={link.name}
                                         className="hover:text-foreground transition-all duration-500 px-1.5"
-                                        onClick={() => trackNavigation.linkClick(link.name.toLowerCase(), link.link)}
                                     >
                                         {link.name}
-                                    </Link>
+                                    </NavLink>
                                 </div>
                             </Container>
                         ))}
@@ -78,9 +74,9 @@ const Navbar = () => {
                 <Container animation="fadeLeft" delay={0.1}>
                     <div className="flex items-center gap-x-4">
                         <Link href="/contact" className="hidden lg:block">
-                            <Button size="sm" variant="outline" trackingSource="navbar_contact">
+                            <ClientButton size="sm" variant="outline" trackingSource="navbar_contact">
                                 Contact Sales
-                            </Button>
+                            </ClientButton>
                         </Link>
                         <div className="lg:hidden">
                             <MobileMenu />
