@@ -1,6 +1,9 @@
+"use client";
+
 import Container from "@/components/global/container";
 import Wrapper from "@/components/global/wrapper";
 import { TESTIMONIALS } from "@/constants";
+import { useSectionTracking } from "@/lib/beam-analytics";
 import Image from "next/image";
 import { Marquee } from "../ui/marquee";
 
@@ -17,8 +20,10 @@ type Testimonial = {
 };
 
 const Testimonials = () => {
+    const sectionRef = useSectionTracking('testimonials');
+    
     return (
-        <div className="flex flex-col items-center justify-center relative w-full pb-16 lg:pb-24">
+        <div ref={sectionRef} className="flex flex-col items-center justify-center relative w-full pb-16 lg:pb-24">
             <Wrapper>
                 <div className="relative flex flex-col items-center justify-center overflow-hidden">
                     <Marquee pauseOnHover className="[--duration:80s] gap-8">

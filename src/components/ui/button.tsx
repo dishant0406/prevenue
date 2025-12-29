@@ -3,6 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import Link from "next/link"
 import * as React from "react"
 
+import { trackCTA } from "@/lib/beam-analytics"
 import { cn } from "@/lib/index"
 
 const buttonVariants = cva(
@@ -38,17 +39,44 @@ interface ButtonProps extends VariantProps<typeof buttonVariants> {
   className?: string
   asChild?: boolean
   href?: string
+  trackingSource?: string // For identifying where the button was clicked
 }
 
 const Button = React.forwardRef<
   HTMLButtonElement,
   ButtonProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ButtonProps>
->(({ className, variant, size, asChild = false, href, children, ...props }, ref) => {
+>(({ className, variant, size, asChild = false, href, children, trackingSource, onClick, ...props }, ref) => {
+  
+  // Enhanced click handler with tracking
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // Track CTA clicks when href is present (indicates it's a CTA)
+    if (href && trackingSource) {
+      if (href === '/contact' || href.includes('contact')) {
+        trackCTA.bookCall(trackingSource);
+      } else {
+        trackCTA.generalClick(trackingSource, href);
+      }
+    }
+    
+    // Call original onClick if provided
+    onClick?.(event);
+  };
+
   if (href && !asChild) {
     return (
       <Link
         href={href}
         className={cn(buttonVariants({ variant, size, className }))}
+        onClick={(e) => {
+          // Track navigation clicks for links
+          if (trackingSource) {
+            if (href === '/contact' || href.includes('contact')) {
+              trackCTA.bookCall(trackingSource);
+            } else {
+              trackCTA.generalClick(trackingSource, href);
+            }
+          }
+        }}
       >
         {children}
       </Link>
@@ -61,6 +89,7 @@ const Button = React.forwardRef<
     <Comp
       className={cn(buttonVariants({ variant, size, className }))}
       ref={ref}
+      onClick={handleClick}
       {...props}
     >
       {children}

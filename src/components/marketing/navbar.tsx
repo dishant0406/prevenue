@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib";
+import { trackNavigation } from "@/lib/beam-analytics";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -43,8 +44,12 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
                 >
-                    <Link href="/" className="flex items-center gap-2">
-                        <Icons.logo className="w-max h-6" />
+                    <Link 
+                        href="/" 
+                        className="flex items-center gap-2"
+                        onClick={() => trackNavigation.logoClick()}
+                    >
+                        <Icons.logo className="h-6 w-auto" />
                     </Link>
                 </motion.div>
 
@@ -57,7 +62,11 @@ const Navbar = () => {
                                 delay={0.1 * index}
                             >
                                 <div className="relative">
-                                    <Link href={link.link} className="hover:text-foreground transition-all duration-500 px-1.5">
+                                    <Link 
+                                        href={link.link} 
+                                        className="hover:text-foreground transition-all duration-500 px-1.5"
+                                        onClick={() => trackNavigation.linkClick(link.name.toLowerCase(), link.link)}
+                                    >
                                         {link.name}
                                     </Link>
                                 </div>
@@ -69,7 +78,7 @@ const Navbar = () => {
                 <Container animation="fadeLeft" delay={0.1}>
                     <div className="flex items-center gap-x-4">
                         <Link href="/contact" className="hidden lg:block">
-                            <Button size="sm" variant="outline">
+                            <Button size="sm" variant="outline" trackingSource="navbar_contact">
                                 Contact Sales
                             </Button>
                         </Link>

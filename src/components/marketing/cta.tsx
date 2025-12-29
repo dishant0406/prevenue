@@ -45,7 +45,7 @@ const CTA = () => {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mt-6">
-                                <Button href="/contact" size="lg">
+                                <Button href="/contact" size="lg" trackingSource="cta_section">
                                     Book a Call
                                 </Button>
                                 <div className="flex flex-col">

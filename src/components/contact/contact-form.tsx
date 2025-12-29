@@ -1,5 +1,6 @@
 'use client'
 
+import { trackForm } from '@/lib/beam-analytics'
 import { AlertCircleIcon, CheckCircleIcon, LoaderIcon, UploadIcon } from "lucide-react"
 import React, { useState } from 'react'
 import Container from "../global/container"
@@ -42,9 +43,17 @@ const ContactForm = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
   const [isPreviousSubmission, setIsPreviousSubmission] = useState(false)
+  const [hasTrackedFormStart, setHasTrackedFormStart] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target
+    
+    // Track form start on first interaction
+    if (!hasTrackedFormStart) {
+      trackForm.contactStart('contact_page')
+      setHasTrackedFormStart(true)
+    }
+    
     setFormData(prev => ({ ...prev, [id]: value }))
     
     // Clear error when user starts typing
@@ -56,6 +65,12 @@ const ContactForm = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = e.target.files
     setFiles(selectedFiles)
+    
+    // Track file upload
+    if (selectedFiles && selectedFiles.length > 0) {
+      const totalSize = Array.from(selectedFiles).reduce((sum, file) => sum + file.size, 0)
+      trackForm.fileUpload(selectedFiles.length, totalSize)
+    }
     
     // Validate files
     if (selectedFiles) {
@@ -96,6 +111,9 @@ const ContactForm = () => {
     setErrors({})
     setSubmitStatus('idle')
 
+    // Track form submission attempt
+    trackForm.contactSubmit(files ? files.length > 0 : false)
+
     try {
       const submitFormData = new FormData()
       
@@ -122,12 +140,17 @@ const ContactForm = () => {
         if (data.errors) {
           setErrors(data.errors)
         }
+        // Track form errors
+        trackForm.contactError(data.message || 'validation_error')
         throw new Error(data.message || 'Something went wrong')
       }
-
+      
       setSubmitStatus('success')
       setSubmitMessage(data.message || 'Thank you for your message! We\'ll get back to you soon.')
       setIsPreviousSubmission(data.previousSubmission || false)
+      
+      // Track successful submission
+      trackForm.contactSuccess(data.previousSubmission || false)
       
       // Only reset form if this is a new submission (not a duplicate)
       if (!data.previousSubmission) {
@@ -149,6 +172,9 @@ const ContactForm = () => {
     } catch (error) {
       setSubmitStatus('error')
       setSubmitMessage(error instanceof Error ? error.message : 'An unexpected error occurred')
+      
+      // Track form errors
+      trackForm.contactError(error instanceof Error ? error.message : 'unknown_error')
     } finally {
       setIsSubmitting(false)
     }

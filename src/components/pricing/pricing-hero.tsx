@@ -83,6 +83,7 @@ const PricingHero = () => {
                                         className="mt-8 w-full"
                                         href={plan.buttonLink || "#"}
                                         variant={plan.popular ? "default" : "outline"}
+                                        trackingSource="pricing_plan"
                                     >
                                         {plan.buttonText}
                                     </Button>

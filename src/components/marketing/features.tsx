@@ -1,11 +1,16 @@
+"use client";
+
 import { COMPANY_INFO, FEATURES } from "@/constants";
+import { useSectionTracking } from "@/lib/beam-analytics";
 import Image from "next/image";
 import Container from "../global/container";
 import Wrapper from "../global/wrapper";
 
 const Features = () => {
+    const sectionRef = useSectionTracking('features');
+    
     return (
-        <div className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
+        <div ref={sectionRef} className="flex flex-col items-center justify-center w-full py-16 lg:py-24">
             <Wrapper>
                 <Container>
                     <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">

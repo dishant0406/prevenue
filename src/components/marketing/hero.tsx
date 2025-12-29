@@ -43,7 +43,7 @@ const Hero = () => {
 
                     <Container delay={0.3}>
                         <div className="mt-6">
-                            <Button href="/contact" size="md">
+                            <Button href="/contact" size="md" trackingSource="hero">
                                 See It In Action
                             </Button>
                         </div>
