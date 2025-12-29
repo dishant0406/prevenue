@@ -1,6 +1,6 @@
 # Prevenue – AI-Powered Booking Management Platform
 
-<img src="https://github.com/user-attachments/assets/380ace4d-7bd0-40bc-9a32-d44770144532" alt="Prevenue Platform">
+<img src="https://static-asset.quickleap.io/Prevenue/prevenue-logo.webp" alt="Prevenue Platform">
 
 ## 🚀 About Prevenue
 
