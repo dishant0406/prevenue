@@ -2,7 +2,8 @@ import Image from "next/image";
 import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
-import { ClientButton } from "../ui/client-button";
+import HeroEmailSignup from "./hero-email-signup";
+
 
 const Hero = () => {
     return (
@@ -43,9 +44,7 @@ const Hero = () => {
 
                     <Container delay={0.3}>
                         <div className="mt-6">
-                            <ClientButton href="/contact" size="md" trackingSource="hero">
-                                See It In Action
-                            </ClientButton>
+                            <HeroEmailSignup />
                         </div>
                     </Container>
 

@@ -2,7 +2,8 @@
 
 import { trackForm } from '@/lib/beam-analytics'
 import { AlertCircleIcon, CheckCircleIcon, LoaderIcon, UploadIcon } from "lucide-react"
-import React, { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import React, { useEffect, useState } from 'react'
 import Container from "../global/container"
 import Wrapper from "../global/wrapper"
 import { Alert, AlertDescription } from "../ui/alert"
@@ -29,6 +30,7 @@ interface FormErrors {
 }
 
 const ContactForm = () => {
+  const searchParams = useSearchParams()
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -42,8 +44,18 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submitMessage, setSubmitMessage] = useState('')
-  const [isPreviousSubmission, setIsPreviousSubmission] = useState(false)
   const [hasTrackedFormStart, setHasTrackedFormStart] = useState(false)
+
+  // Prefill email from URL parameters on component mount
+  useEffect(() => {
+    const emailParam = searchParams.get('email')
+    if (emailParam) {
+      setFormData(prev => ({
+        ...prev,
+        email: decodeURIComponent(emailParam)
+      }))
+    }
+  }, [searchParams])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target
@@ -147,7 +159,6 @@ const ContactForm = () => {
       
       setSubmitStatus('success')
       setSubmitMessage(data.message || 'Thank you for your message! We\'ll get back to you soon.')
-      setIsPreviousSubmission(data.previousSubmission || false)
       
       // Track successful submission
       trackForm.contactSuccess(data.previousSubmission || false)
